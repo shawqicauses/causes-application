@@ -1,0 +1,7 @@
+# DONE REVIEWING: GITHUB COMMIT
+.env
+.vscode
+.swc
+build
+node_modules
+package-lock.json
