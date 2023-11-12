@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT 💫
+// DONE REVIEWING: GITHUB COMMIT ⚔️
 {
   "compilerOptions": {
     "target": "ES5",
@@ -14,7 +14,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    // SHADCN/UI CONFIGURATION
+    "baseUrl": ".",
+    "paths": {"@/*": ["./src/*"]}
   },
   "include": ["src"],
   "exclude": ["node_modules"]
