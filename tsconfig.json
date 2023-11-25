@@ -1,4 +1,4 @@
-// DONE REVIEWING: GITHUB COMMIT ⚔️
+// DONE REVIEWING: GITHUB COMMIT 🎉
 {
   "compilerOptions": {
     "target": "ES5",
@@ -14,11 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    // SHADCN/UI CONFIGURATION
-    "baseUrl": ".",
-    "paths": {"@/*": ["./src/*"]}
+    "incremental": true
   },
-  "include": ["src"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
