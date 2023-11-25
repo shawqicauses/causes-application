@@ -1,0 +1,173 @@
+/* DONE REVIEWING: GITHUB COMMIT 🎉 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  /* THEMES */
+  /* THEMES - BASE */
+  :root {
+    /* GROUNDS */
+    --background: theme(colors.white);
+    --background-layer-2: theme(colors.stone.50);
+    --foreground: theme(colors.stone.950);
+
+    /* DIVIDERS */
+    --border: theme(colors.stone.200);
+    --ring: var(--foreground);
+    --input: var(--border);
+
+    /* BRANDS */
+    --primary: theme(colors.red.500);
+    --primary-foreground: theme(colors.red.50);
+    --secondary: theme(colors.blue.500);
+    --secondary-foreground: theme(colors.blue.50);
+    --accent: var(--foreground);
+    --accent-foreground: var(--background-layer-2);
+
+    --muted: theme(colors.stone.100);
+    --muted-foreground: theme(colors.stone.500);
+
+    /* COMPONENTS */
+    --card: var(--background-layer-2);
+    --card-foreground: var(--foreground);
+
+    --popover: var(--background-layer-2);
+    --popover-foreground: var(--foreground);
+
+    /* DESIGN PERSONALITY */
+    --radius: 0.5rem;
+  }
+
+  /* THEME - DARK */
+  :root.dark {
+    --background: theme(colors.black);
+    --background-layer-2: theme(colors.stone.950);
+    --foreground: theme(colors.stone.50);
+    --border: theme(colors.stone.800);
+    --muted: theme(colors.stone.900);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* TYPOGRAPHY */
+  .shc-heading-style {
+    @apply font-semi-bold leading-tight -tracking-wide text-foreground;
+  }
+
+  .shc-heading-1 {
+    @apply shc-heading-style text-xl md:text-xl-2 lg:text-xl-3;
+  }
+
+  .shc-heading-2 {
+    @apply shc-heading-style text-lg md:text-xl lg:text-xl-2;
+  }
+
+  .shc-heading-3 {
+    @apply shc-heading-style text-base md:text-lg lg:text-xl;
+  }
+
+  .shc-label {
+    @apply text-base font-medium leading-none text-muted-foreground;
+  }
+
+  .shc-label-disabled {
+    @apply cursor-not-allowed opacity-75;
+  }
+
+  .shc-body {
+    @apply text-base font-normal leading-relaxed text-muted-foreground;
+  }
+
+  /* COMPONENTS */
+  .shc-card {
+    @apply rounded-md border border-border bg-background-layer-2 px-3 py-2 text-foreground;
+  }
+
+  .shc-form-disabled-style {
+    @apply disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .shc-form-focus-style {
+    @apply ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  .shc-input-typography-style {
+    @apply text-sm font-medium leading-normal text-foreground file:text-sm file:font-medium placeholder:font-normal placeholder:text-muted-foreground;
+  }
+
+  .shc-input-file-style {
+    @apply file:border-0 file:bg-transparent;
+  }
+
+  .shc-input {
+    @apply shc-flex-center shc-card shc-input-typography-style shc-input-file-style shc-form-disabled-style shc-form-focus-style shc-transition;
+  }
+
+  .shc-button-typography-style {
+    @apply text-sm font-medium leading-none;
+  }
+
+  .shc-button-default {
+    @apply h-10 px-4;
+  }
+
+  .shc-button-sm {
+    @apply h-9 px-3;
+  }
+
+  .shc-button-lg {
+    @apply h-11 px-8;
+  }
+
+  .shc-button-icon {
+    @apply h-10 w-10;
+  }
+
+  .shc-button-primary {
+    @apply border-primary bg-primary text-primary-foreground hover:bg-transparent hover:text-primary;
+  }
+
+  .shc-button-secondary {
+    @apply border-secondary bg-secondary text-secondary-foreground hover:bg-transparent hover:text-secondary;
+  }
+
+  .shc-button-accent {
+    @apply border-accent bg-accent text-accent-foreground hover:bg-transparent hover:text-accent;
+  }
+
+  .shc-button-outline {
+    @apply border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-foreground;
+  }
+
+  .shc-button-ghost {
+    @apply bg-transparent-layer-2 border-transparent text-foreground hover:bg-foreground hover:text-background;
+  }
+
+  .shc-button {
+    @apply shc-flex-center shc-button-typography-style shc-form-focus-style shc-form-disabled-style shc-transition whitespace-nowrap rounded-md border;
+  }
+}
+
+@layer utilities {
+  .shc-flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .shc-flex-col-start {
+    @apply flex flex-col items-start justify-start;
+  }
+
+  .shc-transition {
+    @apply transition-all duration-100 ease-in-out;
+  }
+}
