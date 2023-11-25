@@ -1,5 +1,5 @@
 {
-  "reviewed": "true 🎉",
+  "reviewed": "true 🕳️",
   "version": "1.0.0",
   "name": "causes-application",
   "description": "Causes Application?",
@@ -13,6 +13,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "3.3.2",
+    "@radix-ui/react-label": "2.0.2",
+    "@radix-ui/react-slot": "1.0.2",
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/line-clamp": "0.4.4",
     "class-variance-authority": "0.7.0",
@@ -21,9 +24,11 @@
     "next": "14.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "7.48.2",
     "react-router-dom": "6.18.0",
     "tailwind-merge": "2.0.0",
-    "tailwindcss-animate": "1.0.7"
+    "tailwindcss-animate": "1.0.7",
+    "zod": "3.22.4"
   },
   "devDependencies": {
     "@types/node": "20.9.0",
